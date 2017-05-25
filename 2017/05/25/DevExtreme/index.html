@@ -1,0 +1,852 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="DevExtreme,JavaScript,HTML5," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="DevExtreme 非商用，免费！ DevExtreme is now available via GitHub  完美的跨平台移动、Web应用开发解决方案">
+<meta name="keywords" content="DevExtreme,JavaScript,HTML5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DevExtreme介绍">
+<meta property="og:url" content="http://doalso.com/2017/05/25/DevExtreme/index.html">
+<meta property="og:site_name" content="舵手「碼」头">
+<meta property="og:description" content="DevExtreme 非商用，免费！ DevExtreme is now available via GitHub  完美的跨平台移动、Web应用开发解决方案">
+<meta property="og:image" content="http://doalso.com/uploads/DevExtreme-mobile-application.jpg">
+<meta property="og:updated_time" content="2017-05-25T04:42:44.174Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DevExtreme介绍">
+<meta name="twitter:description" content="DevExtreme 非商用，免费！ DevExtreme is now available via GitHub  完美的跨平台移动、Web应用开发解决方案">
+<meta name="twitter:image" content="http://doalso.com/uploads/DevExtreme-mobile-application.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://doalso.com/2017/05/25/DevExtreme/"/>
+
+
+
+
+
+  <title> DevExtreme介绍 | 舵手「碼」头 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">舵手「碼」头</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">🅓oalso.com</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://doalso.com/2017/05/25/DevExtreme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="univan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舵手「碼」头">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                DevExtreme介绍
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-25T09:36:22+08:00">
+                2017-05-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevExtreme/" itemprop="url" rel="index">
+                    <span itemprop="name">DevExtreme</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/25/DevExtreme/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/25/DevExtreme/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><a href="https://js.devexpress.com/Blogs/" target="_blank" rel="external">DevExtreme 非商用，免费！</a></p>
+<p><a href="https://github.com/DevExpress/devextreme/" target="_blank" rel="external">DevExtreme is now available via GitHub</a></p>
+</blockquote>
+<h1 id="完美的跨平台移动、Web应用开发解决方案"><a href="#完美的跨平台移动、Web应用开发解决方案" class="headerlink" title="完美的跨平台移动、Web应用开发解决方案"></a>完美的跨平台移动、Web应用开发解决方案</h1><p><center><img src="/uploads/DevExtreme-mobile-application.jpg" alt="DevExtreme"></center><br><a id="more"></a><br>DevExtreme Complete Subscription是性能最优的 HTML5,CSS 和 JavaScript 移动、Web开发框架，可以直接在Visual Studio集成开发环境，构建iOS，Android，Tizen和Windows Phone 8应用程序。DevExtreme包含 PhoneJS 和 ChartJS 两个原生UI组件，并且提供源代码。目前，DevExtreme支持VS2010/2012/2013集成开发环境，兼容Android 4+、iOS5+、Windows 8、Window Phone 8、Tizen五大移动平台，是Visual Studio开发人员开发跨平台移动产品的首选工具。</p>
+<h1 id="选择DevExtreme的四大理由"><a href="#选择DevExtreme的四大理由" class="headerlink" title="选择DevExtreme的四大理由"></a>选择DevExtreme的四大理由</h1><h2 id="简化移动应用开发"><a href="#简化移动应用开发" class="headerlink" title="简化移动应用开发"></a>简化移动应用开发</h2><p>运用DevExtreme Complete Subscription创建高度响应式的移动应用。运用强大的HTML、CSS3和JavaScript交付实现一系列如本地应用程序的商业解决方案，不用学习各种语言或框架，你只需要懂得HTML和JavaScript，就可以开始进行你的跨平台开发。</p>
+<p>无论是iPad、iPhone、Android、Windows Phone还是Surface tablet，DevExtreme Complete Subscription可以交付实现。</p>
+<p>支持Apache Cordova (PhoneGap)。这意味着用DevExtreme创建的每个移动app都可以在目标设备上运行，并且可以随时提交到Apple App Store 或 Google Play Store。</p>
+<h2 id="完美的数据可视化"><a href="#完美的数据可视化" class="headerlink" title="完美的数据可视化"></a>完美的数据可视化</h2><p>DevExtreme Complete Subscription为智能手机和平板电脑封装了易于使用的HTML JavaScript应用程序，包含超过30种触摸优化的本地UI小工具，可用于任何应用程序的单个页面。主要包括以下数据可视化工具：</p>
+<p>图表和仪表：DevExtreme Complete Subscription包含高性能的线形图、面积图、柱状图和财务HTML5图表工具。同时还有非常漂亮的圆形和线形HTML5仪表工具。</p>
+<p>量程选择器：HTML 5范围和值的选择器，带有Google仿真图表。</p>
+<p>多功能小部件：一个完整的HTML5多功能小部件，你可以创建与目标平台最匹配的工具。</p>
+<p>自适应样式：DevExtreme Complete Subscription应用特定设备的样式到所有组件，让其看起来有一个本地外观，且开箱即用。</p>
+<h2 id="完美集成Visual-Studio"><a href="#完美集成Visual-Studio" class="headerlink" title="完美集成Visual Studio"></a>完美集成Visual Studio</h2><p>DevExtreme Complete Subscription 已经为Visual Studio做了一系列的优化，熟悉VS的开发人员可以立即着手开始创建运行于iOS, Android和交互式Web下的apps。</p>
+<p>运用Visual Studio的项目模板和向导帮助你马上开始。完整集成的View Designer和代码窗口可以构建理想的视图，所有这一切都在Visual Studio中完成。</p>
+<p>在Visual Studio内使用内置的设备模拟器，或者DXProxy和浏览器调试器调试你的移动应用。用DevExpress Courier App在PhoneGap环境下立即执行应用，交互一个本地的、可以立即上市的IOS和Android应用包，而不受平台SDK或额外服务器的限制。</p>
+<h2 id="一种语言、一个代码库搞定任何app"><a href="#一种语言、一个代码库搞定任何app" class="headerlink" title="一种语言、一个代码库搞定任何app"></a>一种语言、一个代码库搞定任何app</h2><p>一个SDK：DevExtreme Complete Subscription只需通过一个SDK就可以交付到所有常用的平台上，真正的代码重用和省心的项目管理。</p>
+<p>MVVM：支持Knockout.js，意味着Model View（基于UI开发的ViewModel）将变得前所未有的简单。</p>
+<p>jQuery：开发者当前所掌握的东西全部都可以利用起来，不用担心知识上的限制。</p>
+<p><a href="https://www.evget.com/product/3150/" target="_blank" rel="external">资料来源：慧都控件网</a></p>
+<h1 id="来自官网的非商用许可协议"><a href="#来自官网的非商用许可协议" class="headerlink" title="来自官网的非商用许可协议"></a><a href="https://js.devexpress.com/EULAs/DevExtremeNonCommercial/" target="_blank" rel="external">来自官网的非商用许可协议</a></h1><blockquote>
+<h2 id="DevExtreme-Non-Commercial-Non-Competitive-End-User-License-Agreement"><a href="#DevExtreme-Non-Commercial-Non-Competitive-End-User-License-Agreement" class="headerlink" title="DevExtreme Non-Commercial, Non-Competitive End User License Agreement"></a>DevExtreme Non-Commercial, Non-Competitive End User License Agreement</h2><p>Version 1.0, April 2017</p>
+<p>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</p>
+<ol>
+<li><p>DEFINITIONS.<br>“Commercial Purpose” is one intended for or that results in commercial advantage or monetary compensation.  </p>
+<p>“Competitive Purpose” is one intended for or that results in commercial, non-commercial, for profit or not for profit licensing, transfer or distribution of a Derivative Work that is competitive with the Work, contains the same or substantially similar functionality as the Work, or could likely result in third parties utilizing the Derivative Work in lieu of or in place of the Work.</p>
+<p>“Contribution” shall mean any work of authorship, including the original version of the Work and any modifications or additions to that Work or Derivative Works thereof, that is intentionally submitted to Licensor for inclusion in the Work by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, “submitted” means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Work, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as “Not a Contribution.”</p>
+<p>“Derivative Work” shall mean any work, whether in Source or Object form, that is based on (or derived from) the Work and for which the editorial revisions, annotations, elaborations, or other modifications represent, as a whole, an original work of authorship. For the purposes of this License, Derivative Works shall not include works that remain separable from, or merely link (or bind by name) to the interfaces of, the Work and Derivative Works thereof.</p>
+<p>“Contributor” shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.</p>
+<p>“License” shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.</p>
+<p>“Licensor” shall mean the copyright owner or entity authorized by the copyright owner that is granting the License. If you receive the Work from Developer Express, Inc., d/b/a DevExpress, the Licensor shall be Developer Express, Inc.</p>
+<p>“Legal Entity” shall mean the union of the acting entity and all other entities that control, are controlled by, or are under common control with that entity. For the purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.</p>
+<p>“Object” form shall mean any form resulting from mechanical transformation or translation of a Source form, including but not limited to compiled object code, generated documentation, and conversions to other media types.</p>
+<p>“Source” form shall mean the preferred form for making modifications, including but not limited to software source code, documentation source, and configuration files.</p>
+<p>“Work” shall mean the work of authorship, whether in Source or Object form, made available under the License, as indicated by a copyright notice that is included in or attached to the work (an example is provided in the Appendix below).</p>
+<p>“You” (or “Your”) shall mean an individual or Legal Entity exercising permissions granted by this License.</p>
+</li>
+<li><p>GRANT OF COPYRIGHT LICENSE — NON-COMMERCIAL; NON-COMPETITIVE PRODUCTS.<br>Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to, at no charge or other compensation to your licensees, reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form for non-commercial purposes; and provided further that such Derivative Works may not be competitive with, or offer the same or substantially similar core functionality as, the Work. Without limiting the generality of the foregoing, You may not use the Work or Derivative Works for Commercial Purposes or Competitive Purposes.</p>
+</li>
+<li><p>GRANT OF PATENT LICENSE.<br>Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.</p>
+</li>
+<li><p>REDISTRIBUTION; NON-COMMERCIAL; NON-COMPETITIVE.<br>You may reproduce and distribute (at no charge or other compensation, and not for a Commercial Purpose or Competitive Purpose) copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:</p>
+</li>
+</ol>
+<blockquote>
+<ol>
+<li><p>You must give any other recipients of the Work or Derivative Works a copy of this License; and</p>
+</li>
+<li><p>You must cause any modified files to carry prominent notices stating that You changed the files; and</p>
+</li>
+<li><p>You must retain, in the Source form of any Derivative Works that You distribute, all copyright, patent, trademark, and attribution notices from the Source form of the Work, excluding those notices that do not pertain to any part of the Derivative Works; and</p>
+</li>
+<li><p>If the Work includes a “NOTICE” text file as part of its distribution, then any Derivative Works that You distribute must include a readable copy of the attribution notices contained within such NOTICE file, excluding those notices that do not pertain to any part of the Derivative Works, in at least one of the following places: within a NOTICE text file distributed as part of the Derivative Works; within the Source form or documentation, if provided along with the Derivative Works; or, within a display generated by the Derivative Works, if and wherever such third-party notices normally appear. The contents of the NOTICE file are for informational purposes only and do not modify the License. You may add Your own attribution notices within Derivative Works that You distribute, alongside or as an addendum to the NOTICE text from the Work, provided that such additional attribution notices cannot be construed as modifying the License.</p>
+</li>
+</ol>
+<p>You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.</p>
+</blockquote>
+<ol>
+<li><p>SUBMISSION OF CONTRIBUTIONS.<br>Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be (a) exclusively owned by Licensor (including all copyrights, patent rights and other intellectual property rights therein), and (b) under the terms and conditions of this License. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.</p>
+</li>
+<li><p>TRADEMARKS.<br>This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.</p>
+</li>
+<li><p>DISCLAIMER OF WARRANTY.<br>Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.</p>
+</li>
+<li><p>LIMITATION OF LIABILITY.<br>In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.</p>
+</li>
+</ol>
+<p>Open Source Libraries</p>
+<blockquote>
+<p>The following open source libraries are used and included within this work:</p>
+<p>jQuery JavaScript Library (Open Source - MIT License)<br>Copyright © jQuery Foundation and other contributors<br><a href="http://jquery.com/" target="_blank" rel="external">http://jquery.com/</a></p>
+<p>Knockout JavaScript Library (Open Source - MIT License)<br>Copyright © Knockoutjs.com<br><a href="http://knockoutjs.com/" target="_blank" rel="external">http://knockoutjs.com/</a><br><a href="http://opensource.org/licenses/mit-license.php" target="_blank" rel="external">http://opensource.org/licenses/mit-license.php</a></p>
+<p>Globalize JavaScript Library (Open Source - MIT License)<br>Copyright © jQuery Foundation and other contributors<br><a href="http://jquery.org/license" target="_blank" rel="external">http://jquery.org/license</a></p>
+<p>cldrjs JavaScript Library (Open Source - MIT License)<br>Copyright © Rafael Xavier de Souza<br><a href="http://rafael.xavier.blog.br" target="_blank" rel="external">http://rafael.xavier.blog.br</a><br><a href="https://github.com/rxaviers/cldrjs/blob/master/LICENSE-MIT" target="_blank" rel="external">https://github.com/rxaviers/cldrjs/blob/master/LICENSE-MIT</a></p>
+<p>CLDR - Unicode Common Locale Data Repository<br>Copyright © 1991-2017 Unicode, Inc<br><a href="http://unicode.org/copyright.html" target="_blank" rel="external">http://unicode.org/copyright.html</a></p>
+<p>AngularJS JavaScript Library (Open Source - MIT License)<br>Copyright © Google, Inc.<br><a href="http://angularjs.org/" target="_blank" rel="external">http://angularjs.org/</a></p>
+<p>JSZip JavaScript Library (Open Source - MIT License)<br>Copyright © Stuart Knightley, David Duponchel, Franz Buchinger, António Afonso<br><a href="https://stuk.github.io/jszip/" target="_blank" rel="external">https://stuk.github.io/jszip/</a></p>
+</blockquote>
+<p>The open source libraries included in this work are done so pursuant to each individual open source library license and subject to the disclaimers and limitations on liability set forth in each open source library license.</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DevExtreme/" rel="tag"># DevExtreme</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/24/DevExtreme v17.1/" rel="next" title="What’s New in DevExtreme v17.1">
+                <i class="fa fa-chevron-left"></i> What’s New in DevExtreme v17.1
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.png"
+               alt="univan" />
+          <p class="site-author-name" itemprop="name">univan</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#完美的跨平台移动、Web应用开发解决方案"><span class="nav-number">1.</span> <span class="nav-text">完美的跨平台移动、Web应用开发解决方案</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选择DevExtreme的四大理由"><span class="nav-number">2.</span> <span class="nav-text">选择DevExtreme的四大理由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简化移动应用开发"><span class="nav-number">2.1.</span> <span class="nav-text">简化移动应用开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完美的数据可视化"><span class="nav-number">2.2.</span> <span class="nav-text">完美的数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完美集成Visual-Studio"><span class="nav-number">2.3.</span> <span class="nav-text">完美集成Visual Studio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一种语言、一个代码库搞定任何app"><span class="nav-number">2.4.</span> <span class="nav-text">一种语言、一个代码库搞定任何app</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来自官网的非商用许可协议"><span class="nav-number">3.</span> <span class="nav-text">来自官网的非商用许可协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DevExtreme-Non-Commercial-Non-Competitive-End-User-License-Agreement"><span class="nav-number">3.1.</span> <span class="nav-text">DevExtreme Non-Commercial, Non-Competitive End User License Agreement</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+ <div class="powered-by"></div> <!--  
+  <span class="comment" itemprop="copyrightHolder">
+  <a class="theme-link" href="tencent://message/?uin=823883614"><i class="fa fa-comment-o" aria-hidden="true"></i> </a>
+  </span>  --> <div class="theme-info">
+  <span class="author" itemprop="copyrightHolder"> 
+  <a class="theme-link" href="mailto:doalso@outlook.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> doalso.com</a>
+  </span><span> </span> </div>
+
+
+</div>
+
+
+<div class="powered-by">
+<!--  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a> -->
+<a class="server-link" href="https://github.com/">
+   <i class="fa fa-server" aria-hidden="true"></i> GitHub
+  </a> 
+</div>
+
+<div class="powered-by">
+<a class="theme-link" href="https://hexo.io"><i class="fa fa-cogs" aria-hidden="true"></i> Hexo</a>  
+</div>
+
+<div class="theme-info">
+<a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+   <i class="fa fa-paint-brush" aria-hidden="true"></i> NexT
+  </a>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://doalso.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://doalso.com/2017/05/25/DevExtreme/';
+          this.page.identifier = '2017/05/25/DevExtreme/';
+          this.page.title = 'DevExtreme介绍';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://doalso.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
