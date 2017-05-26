@@ -1,0 +1,65 @@
+<script type="text/javascript">
+function createXmlHttp() {
+    if (window.XMLHttpRequest) {
+       xmlHttp = new XMLHttpRequest();                  
+    } else {
+       xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+}
+
+function getSource(url) {
+    if (url == "") {
+        return;
+    }
+    createXmlHttp();                                            
+    xmlHttp.onreadystatechange = writeSource;                   
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send(null);
+}
+
+function writeSource() {
+    if (xmlHttp.readyState == 4) {
+    	alert(xmlHttp.responseText); 
+       
+    }
+}
+function iFrameHeight() {   
+var ifm= document.getElementById("iframepage");   
+var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;   
+if(ifm != null && subWeb != null) {
+   ifm.height = subWeb.body.scrollHeight;
+   ifm.width = subWeb.body.scrollWidth;
+}   
+}   
+
+function showSource(){
+    var source = "<html>";
+    //source += document.getElementsByTagName('html')[0].innerHTML;
+    // source += document.getElementById('iframepage').contentWindow.document.getElementsByTagName('html')[0].innerHTML;
+    source += window.frames[0].document.body.innerHTML;
+	source += "</html>";
+    //now we need to escape the html special chars, javascript has escape
+    //but this does not do what we want
+    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    //now we add <pre> tags to preserve whitespace
+    source = "<pre>"+source+"</pre>";
+    //now open the window and set the source as the content
+    sourceWindow = window.open('','Source of page','height=600,width=800,scrollbars=1,resizable=1');
+    sourceWindow.document.write(source);
+    sourceWindow.document.close(); //close the document for writing, not the window
+    //give source window focus
+    if(window.focus) sourceWindow.focus();
+}  
+</script>
+<html>  
+<head>  
+</head>  
+<body>  
+<p>文檔第一行</p>  
+<p>文檔第二行</p>  
+<iframe id="iframepage" frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" src="TextBox.html" onLoad="iFrameHeight()"></iframe>
+<a href="javascript:showSource('test.html');">HTML代码</a>
+
+</body>  
+</html>  
+

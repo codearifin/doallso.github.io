@@ -3,18 +3,18 @@ window.onload = function() {
     
     var viewModel = {
         simple: {
-            value: "王二小"
+            value: "John Smith"
         },
         withPlaceholder: {
-            placeholder: "在此输入名称..."
+            placeholder: "Enter full name here..."
         },
         withClearButton: {
-            value: "王二小",
+            value: "John Smith",
             showClearButton: true
         },
         passwordMode: {
             mode: "password",
-            placeholder: "输入密码",
+            placeholder: "Enter password",
             showClearButton: true,
             value: "f5lzKs0T",
         },
@@ -23,13 +23,13 @@ window.onload = function() {
             maskRules: {"X": /[02-9]/}
         },
         disabled: {
-            value: "王二小",
+            value: "John Smith",
             disabled: true
         },
         fullNameOptions: {
-            value: "smith",
+            value: "Smith",
             showClearButton: true,
-            placeholder: "输入姓名",
+            placeholder: "Enter full name",
             valueChangeEvent: "keyup",
             onValueChanged: function(data) {
                 emailValue(data.value.replace(/\s/g, "").toLowerCase() + "@corp.com");

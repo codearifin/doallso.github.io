@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="DevExtreme,JavaScript,HTML5,UI Widget,TextBox," />
+  <meta name="keywords" content="DevExtreme,JavaScript,HTML5,UI Widget," />
 
 
 
@@ -88,14 +88,14 @@
 
 
 <meta name="description" content="&amp;nbsp;&amp;nbsp;文本框控件允许用户输入和编辑单行文字。">
-<meta name="keywords" content="DevExtreme,JavaScript,HTML5,UI Widget,TextBox">
+<meta name="keywords" content="DevExtreme,JavaScript,HTML5,UI Widget">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DevExtreme TextBox">
 <meta property="og:url" content="http://doalso.com/2017/05/25/DevExtreme/Editors/TextBox/index.html">
 <meta property="og:site_name" content="舵手「碼」头">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;文本框控件允许用户输入和编辑单行文字。">
 <meta property="og:image" content="http://doalso.com/uploads/Text_Box.png">
-<meta property="og:updated_time" content="2017-05-25T09:46:30.723Z">
+<meta property="og:updated_time" content="2017-05-26T03:18:30.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DevExtreme TextBox">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;文本框控件允许用户输入和编辑单行文字。">
@@ -376,11 +376,40 @@
 <blockquote>
 <p>Knockout.js</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> viewModel = &#123;</div><div class="line">    <span class="attr">simple</span>: &#123;</div><div class="line">        <span class="attr">value</span>: <span class="string">"王二小"</span></div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">ko.applyBindings(viewModel, <span class="built_in">document</span>.getElementById(<span class="string">"text-box-demo"</span>));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> viewModel = &#123;</div><div class="line">    <span class="attr">simple</span>: &#123;</div><div class="line">        <span class="attr">value</span>: <span class="string">"姓名"</span></div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">ko.applyBindings(viewModel, <span class="built_in">document</span>.getElementById(<span class="string">"text-box-demo"</span>));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>Demo</p>
+<p>Demo      </p>
+<blockquote>
+<p><a href="javascript:showJS();" target="_blank" rel="external">Knockout.js代码</a><br><a href="javascript:showSource();" target="_blank" rel="external">HTML代码</a></p>
 </blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="640" height="480" src="/DevExtreme/TextBox.html"></iframe>
+</blockquote>
+<script type="text/javascript" language="javascript">   
+function iFrameHeight() {
+    var ifm = document.getElementById("iframepage");
+    var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+    if (ifm != null && subWeb != null) {
+        ifm.height = subWeb.body.scrollHeight;
+        ifm.width = subWeb.body.scrollWidth;
+    }
+}
+function showSource() {
+    var source = "<html>";
+    source += window.frames[0].document.body.innerHTML;
+    source += "</html>";
+    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    source = "<pre>" + source + "</pre>";
+    sourceWindow = window.open('', 'Source of page', 'height=600,width=800,scrollbars=1,resizable=1');
+    sourceWindow.document.write(source);
+    sourceWindow.document.close(); //close the document for writing, not the window
+    if (window.focus)
+        sourceWindow.focus();
+}
+function showJS() {
+    window.open('/DevExtreme/TextBox.js', 'newwindow', 'height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1,location=no, status=no')
+};
+</script>
+
+<iframe id="iframepage" frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" src="/DevExtreme/TextBox.html" onload="iFrameHeight()"></iframe>
 
 
 
@@ -420,8 +449,6 @@
             <a href="/tags/HTML5/" rel="tag"># HTML5</a>
           
             <a href="/tags/UI-Widget/" rel="tag"># UI Widget</a>
-          
-            <a href="/tags/TextBox/" rel="tag"># TextBox</a>
           
         </div>
       
@@ -534,7 +561,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
