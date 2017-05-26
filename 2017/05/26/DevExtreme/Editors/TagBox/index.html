@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="舵手「碼」头">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;Tag Box允许用户从下拉列表中选择多个项目。">
 <meta property="og:image" content="http://doalso.com/uploads/Tag_Box.png">
-<meta property="og:updated_time" content="2017-05-26T07:16:54.165Z">
+<meta property="og:updated_time" content="2017-05-26T08:23:01.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TagBox">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;Tag Box允许用户从下拉列表中选择多个项目。">
@@ -406,9 +406,7 @@
 <blockquote>
 <p>Demo      </p>
 <blockquote>
-<p><a href="javascript:showJS();" target="_blank" rel="external">Knockout</a></p>
-<p><a href="javascript:showData();" target="_blank" rel="external">data.js</a></p>
-<p><a href="javascript:showSource();" target="_blank" rel="external">HTML</a></p>
+<p><a href="javascript:showJS();" target="_blank" rel="external">Knockout</a><br><a href="javascript:showData();" target="_blank" rel="external">Data</a></p>
 </blockquote>
 </blockquote>
 <script type="text/javascript" language="javascript">   
@@ -420,23 +418,11 @@ function iFrameHeight() {
         ifm.width = subWeb.body.scrollWidth;
     }
 }
-function showSource() {
-    var source = "<html>";
-    source += window.frames[0].document.body.innerHTML;
-    source += "</html>";
-    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    source = "<pre>" + source + "</pre>";
-    sourceWindow = window.open('', 'Source of page', 'height=600,width=800,scrollbars=1,resizable=1');
-    sourceWindow.document.write(source);
-    sourceWindow.document.close(); //close the document for writing, not the window
-    if (window.focus)
-        sourceWindow.focus();
-}
 function showJS() {
-    window.open('/DevExtreme/TagBox.js', 'newwindow', 'height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1,location=no, status=no')
+window.open('/DevExtreme/TagBox.js', '_blank', 'height=600,width=800,toolbar=0,location=0,menubar=0');    
 };
 function showData() {
-    window.open('/DevExtreme/TagBox_data.js', 'newwindow', 'height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1,location=no, status=no')
+window.open('/DevExtreme/TagBox_data.js', '_blank', 'height=600,width=800,toolbar=0,location=0,menubar=0');    
 };
 </script>
 
@@ -502,7 +488,7 @@ function showData() {
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/26/DevExtreme/Editors/TagBox2/" rel="prev" title="TagBox - Grouped Items">
+              <a href="/2017/05/26/DevExtreme/Editors/TagBox_Grouped_Items/" rel="prev" title="TagBox - Grouped Items">
                 TagBox - Grouped Items <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -567,7 +553,7 @@ function showData() {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -578,7 +564,7 @@ function showData() {
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

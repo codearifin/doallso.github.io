@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="舵手「碼」头">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;Text Box允许用户输入和编辑单行文字。">
 <meta property="og:image" content="http://doalso.com/uploads/Text_Box.png">
-<meta property="og:updated_time" content="2017-05-26T06:51:03.489Z">
+<meta property="og:updated_time" content="2017-05-26T08:16:29.700Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TextBox">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;Text Box允许用户输入和编辑单行文字。">
@@ -403,7 +403,6 @@
 <p>Demo      </p>
 <blockquote>
 <p><a href="javascript:showJS();" target="_blank" rel="external">Knockout</a></p>
-<p><a href="javascript:showSource();" target="_blank" rel="external">HTML</a></p>
 </blockquote>
 </blockquote>
 <script type="text/javascript" language="javascript">   
@@ -415,20 +414,20 @@ function iFrameHeight() {
         ifm.width = subWeb.body.scrollWidth;
     }
 }
-function showSource() {
-    var source = "<html>";
-    source += window.frames[0].document.body.innerHTML;
-    source += "</html>";
-    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    source = "<pre>" + source + "</pre>";
-    sourceWindow = window.open('', 'Source of page', 'height=600,width=800,scrollbars=1,resizable=1');
-    sourceWindow.document.write(source);
-    sourceWindow.document.close(); //close the document for writing, not the window
-    if (window.focus)
-        sourceWindow.focus();
-}
+//function showSource() {
+//    var source = "<html>";
+//    source += window.frames[0].document.body.innerHTML;
+//    source += "</html>";
+//    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+//    source = "<pre>" + source + "</pre>";
+//    sourceWindow = window.open('', 'Source of page', 'height=600,width=800,scrollbars=1,resizable=1');
+//    sourceWindow.document.write(source);
+//    sourceWindow.document.close(); //close the document for writing, not the window
+//    if (window.focus)
+//        sourceWindow.focus();
+//}
 function showJS() {
-    window.open('/DevExtreme/TextBox.js', 'newwindow', 'height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=1, resizable=1,location=no, status=no')
+window.open('/DevExtreme/TextBox.js', '_blank', 'width=800,height=600,toolbar=0,location=0,menubar=0');    
 };
 </script>
 
@@ -559,7 +558,7 @@ function showJS() {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -570,7 +569,7 @@ function showJS() {
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
