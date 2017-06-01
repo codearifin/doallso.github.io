@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DevExtreme Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/knockout-min.js"></script>
+    <script src="./js/cldr/cldr.min.js"></script>
+    <script src="./js/cldr/event.min.js"></script>
+    <script src="./js/cldr/supplemental.min.js"></script>
+    <script src="./js/cldr/unresolved.min.js"></script>
+    <script type="text/javascript" src="./js/globalize/globalize.min.js"></script>
+    <script type="text/javascript" src="./js/globalize/message.min.js"></script>
+    <script type="text/javascript" src="./js/globalize/number.min.js"></script>
+    <script type="text/javascript" src="./js/globalize/currency.min.js"></script>
+    <script type="text/javascript" src="./js/globalize/date.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="./css/dx.light.css" />
+    <script src="./js/dx.all.js"></script>
+    <script src="Validator_data.js"></script>
+    <link rel="stylesheet" type ="text/css" href ="Validator_styles.css" />
+    <script src="Validator.js"></script>
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <form id="validation-demo" class="form" action="your-action" data-bind="event: { submit: onFormSubmit }">
+            <div class="dx-fieldset">
+                <div class="dx-fieldset-header">登陆凭证</div>
+                <div class="dx-field">
+                    <div class="dx-field-label">登陆账号</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: {}, 
+                            dxValidator: loginValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">登陆密码</div>
+                    <div class="dx-field-value">
+                        <div id="password-validation" data-bind="
+                            dxTextBox: {
+                                mode: 'password'
+                            }, 
+                            dxValidator: passwordValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">确认密码</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: {
+                                mode: 'password'
+                            }, 
+                            dxValidator: confirmPasswordValidationRules">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dx-fieldset">
+                <div class="dx-fieldset-header">个人信息</div>
+                <div class="dx-field">
+                    <div class="dx-field-label">姓名</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: { value: 'Peter' }, 
+                            dxValidator: nameValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">生日</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxDateBox: dateboxOptions,
+                            dxValidator: dobValidationRules">
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="dx-fieldset">
+                <div class="dx-fieldset-header">订单地址</div>
+                <div class="dx-field">
+                    <div class="dx-field-label">国家</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxSelectBox: { dataSource: countries },
+                            dxValidator: countryValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">城市</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: {},
+                            dxValidator: cityValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">地址</div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: {},
+                            dxValidator: addressValidationRules">
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">电话 <i>(可选)</i></div>
+                    <div class="dx-field-value">
+                        <div data-bind="
+                            dxTextBox: phoneTextBoxOptions,
+                            dxValidator: phoneValidationRules">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="check" data-bind="dxCheckBox: { 
+                value: false,
+                text: '我同意条款和条件'}, 
+                dxValidator: checkValidationRules">
+            </div>
+            
+            <div id="summary" data-bind="dxValidationSummary: {}"></div>
+            
+            <div id="button" data-bind="dxButton: submitButtonOptions"></div>
+        </div>
+    </div>
+</body>
+</html>
