@@ -1,0 +1,31 @@
+#form-demo {
+    margin: 10px;
+    text-align: center;
+}
+
+#form-demo > div {
+    text-align: left;
+}
+
+.options {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.options > div {
+    margin-top: 25px;
+}
+
+.form-container {
+    display: inline-block;
+    width: 100%;
+    max-width: 550px;
+}
+
+#form {
+    margin-top: 25px;
+    max-width: 550px;
+    min-width: 300px;
+}

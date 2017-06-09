@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DevExtreme Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/knockout-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="./css/dx.light.css" />
+    <script src="./js/dx.all.js"></script>
+    <script src="Form_data.js"></script>
+    <link rel="stylesheet" type ="text/css" href ="Form_styles.css" />
+    <script src="Form.js"></script>
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <div id="form-demo">
+            <div class="form-container">
+               <div>选择公司:</div>
+               <div data-bind="dxSelectBox: selectCompanyOptions"></div>
+               <div id="form" data-bind="dxForm: formOptions"></div>
+            </div>
+            <div class="options">
+                <h4>表单选项</h4>
+                <div>
+                    <div>标签位置:</div>
+                    <div data-bind="dxSelectBox: labelLocationOptions"></div>
+                </div>
+                <div>
+                    <div>表单列数:</div>
+                    <div data-bind="dxSelectBox: colCountOptions"></div>
+                </div>
+                <div>
+                    <div>最小列宽:</div>
+                    <div data-bind="dxSelectBox: minColWidthOptions"></div>
+                </div>
+                <div>
+                    <div>表单宽度:</div>
+                    <div data-bind="dxNumberBox: widthOptions"></div>
+                </div>
+                <div>
+                    <div data-bind="dxCheckBox: readOnlyOptions"></div>
+                </div>
+                <div>
+                    <div data-bind="dxCheckBox: showColonOptions"></div>
+                </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
