@@ -1,0 +1,23 @@
+#container {
+    min-height: 440px;
+    padding: 10px 5px 0;
+}
+
+#scrollview {
+    height: auto;
+    position: absolute;
+    top: 200px; 
+    bottom: 0;
+}
+
+#show-scrollbar-mode {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.options-container > .dx-checkbox {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}

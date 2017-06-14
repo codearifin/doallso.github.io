@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DevExtreme Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/knockout-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="./css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="./css/dx.light.css" />
+    <script src="./js/dx.all.js"></script>
+    <script src="ScrollView_data.js"></script>
+    <link rel="stylesheet" type ="text/css" href ="ScrollView_styles.css" />
+    <script src="ScrollView.js"></script>
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <div id="container">
+            <div class="options-container">
+                <div class="selectbox-container">
+                    Show scrollbar: 
+                    <div id="show-scrollbar-mode" data-bind="dxSelectBox: {
+                        items: showScrollbarModes,
+                        value: showScrollbarMode,
+                        valueExpr: 'value',
+                        displayExpr: 'text',
+                        width: 125
+                    }"></div>
+                </div>
+                <div id="use-reach-bottom" data-bind="dxCheckBox: {
+                    value: reachBottomValue,
+                    text: 'Update content on the ReachBottom event'
+                }"></div>
+                <div id="use-pull-down-bottom" data-bind="dxCheckBox: {
+                    value: pullDownValue,
+                    text: 'Update content on the PullDown event'
+                }"></div>
+                <div id="scroll-by-content" data-bind="dxCheckBox: {
+                    value: scrollByContentValue,
+                    text: 'Scroll by content'
+                }"></div>
+                <div id="scroll-by-thumb" data-bind="dxCheckBox: {
+                    value: scrollByThumbValue,
+                    text: 'Scroll by thumb'
+                }"></div>
+            </div>    
+            <div id="scrollview" data-bind="dxScrollView: {
+                bounceEnabled: pullDownValue,
+                scrollByContent: true,
+                scrollByThumb: true,
+                showScrollbar: showScrollbarMode,
+                scrollByContent: scrollByContentValue,
+                scrollByThumb: scrollByThumbValue,
+                onPullDown: updateTopContent,
+                onReachBottom: updateBottomContent,
+                reachBottomText: 'Updating...'
+            }">
+                <div data-bind="html: content"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
