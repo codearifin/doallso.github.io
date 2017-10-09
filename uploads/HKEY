@@ -1,0 +1,12 @@
+TdxSpreadSheetCustomView *ASheet;
+ASheet = dxSpreadSheet1->ActiveSheet;
+//...
+randomize;
+for(i = 1; i <= 2; i++) // the i variable specifies the row index
+{
+for(j = 1; j <= 3; j++) // the j variable specifies the column index
+{
+AValue = IntToStr(random(100));
+SetCellText(ASheet, i, j, AValue, false);
+}
+}
